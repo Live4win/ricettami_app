@@ -18,16 +18,10 @@ class LoginView extends GetView<LoginController> {
               position: DecorationPosition.foreground,
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: Colors.black.withOpacity(0.1),
+                  color: Colors.black.withValues(alpha: 0.1 * 255),
+                  width: 0.5,
                 ),
                 borderRadius: BorderRadius.circular(8),
-                /*boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
-                          blurRadius: 8,
-                          offset: Offset(0, 4),
-                        ),
-                      ],*/
               ),
               child: Padding(
                 padding: const EdgeInsets.all(24.0),
@@ -92,9 +86,6 @@ class LoginView extends GetView<LoginController> {
                             onPressed: () => controller.forgotPassword(),
                             child: Text(
                               'Password dimenticata?',
-                              /*style: TextStyle(
-                                decoration: TextDecoration.underline,
-                              ),*/
                             ),
                           ),
                         ],
