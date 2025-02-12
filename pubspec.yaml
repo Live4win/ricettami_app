@@ -1,0 +1,48 @@
+name: ricettami_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_launcher_icons: ^0.14.3
+  get: ^4.6.6
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  assets:
+    - assets/icons/ricettami_logo.png
+  fonts:
+    - family: RicettamiIcons
+      fonts:
+        - asset: assets/icons/RicettamiIcons.ttf
+
+    - family: THICCCBOI
+      fonts:
+        - asset: assets/fonts/THICCCBOI/THICCCBOI-Thin.ttf
+          weight: 200
+        - asset: assets/fonts/THICCCBOI/THICCCBOI-Light.ttf
+          weight: 300
+        - asset: assets/fonts/THICCCBOI/THICCCBOI-Medium.ttf
+          weight: 400
+        - asset: assets/fonts/THICCCBOI/THICCCBOI-Regular.ttf
+          weight: 500
+        - asset: assets/fonts/THICCCBOI/THICCCBOI-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/THICCCBOI/THICCCBOI-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/THICCCBOI/THICCCBOI-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/THICCCBOI/THICCCBOI-ThicccAF.ttf
+          weight: 900
+
+  uses-material-design: true
