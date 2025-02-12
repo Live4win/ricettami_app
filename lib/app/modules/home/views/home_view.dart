@@ -17,10 +17,9 @@ class HomeView extends GetView<HomeController> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              RicettamiIcons.full_ricettami_logo,
-              size: 256,
-              color: Get.theme.colorScheme.primary,
+            Image.asset(
+              'assets/full_ricettami_logo.png',
+              width: 256,
             ),
             Text(
               'HomeView is working',

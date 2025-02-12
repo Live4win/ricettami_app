@@ -1,0 +1,62 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+         
+
+        {
+            "name": "Run with envs",
+            "type": "dart",
+            "request": "launch",
+            "args": [
+                "-d",
+                "web-server",
+                "--web-port",
+                "3000",
+                "--web-hostname",
+                "localhost",
+                "--dart-define-from-file",
+                "env.json",
+                "--dart-define-from-file",
+                "config.json"
+            ],
+            "codeLens": {
+                // Types of CodeLens to inject
+                "for": [
+                    "run-file",
+                    "debug-file"
+                ],
+                // Text for CodeLens link (${debugType} will be replaced with "run" or "debug")
+                "title": "${debugType} (with envs)"
+            },
+        },
+        {
+            "name": "Run webserver with envs",
+            "type": "dart",
+            "request": "launch",
+            "args": [
+                "-d",
+                "web-server",
+                "--web-port",
+                "3000",
+                "--web-hostname",
+                "localhost",
+                "--dart-define-from-file",
+                "env.json",
+                "--dart-define-from-file",
+                "config.json"
+            ],
+            "flutterMode": "release",
+            "env": {
+                "RELEASE_MODE": "true"
+            },
+            "codeLens": {
+                // Types of CodeLens to inject
+                "for": [
+                    "run-file"
+                ],
+                // Text for CodeLens link (${debugType} will be replaced with "run" or "debug")
+                "title": "Release (with envs)"
+            },
+        },
+    ]
+}

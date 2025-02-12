@@ -21,6 +21,8 @@ dev_dependencies:
 flutter:
   assets:
     - assets/icons/ricettami_logo.png
+    - assets/full_ricettami_logo.png
+    - assets/ricettami_logo.png
   fonts:
     - family: RicettamiIcons
       fonts:
