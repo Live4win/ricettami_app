@@ -12,6 +12,7 @@ dependencies:
   flutter_launcher_icons: ^0.14.3
   get: ^4.6.6
   google_fonts: ^6.2.1
+  responsive_grid: ^2.4.4
 
 dev_dependencies:
   flutter_test:
