@@ -17,6 +17,7 @@ void main() {
       themeMode: ThemeMode.light,
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
+      debugShowCheckedModeBanner: false,
     ),
   );
 }
