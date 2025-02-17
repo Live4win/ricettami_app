@@ -20,7 +20,7 @@ class AppDatabase {
     try {
       var response = await _client.post(
           'https://cors-anywhere.herokuapp.com/$DATABASE_BASE_URL/api/login',
-          data: {'email': username, 'password': password});
+          data: {'username': username, 'password': password});
 
       print(response.data);
     } catch (error) {

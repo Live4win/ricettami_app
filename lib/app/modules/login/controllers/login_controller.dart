@@ -2,7 +2,7 @@ import 'package:ricettami_app/core_packages.dart';
 import 'package:flutter/material.dart';
 
 class LoginController extends GetxController {
-  TextEditingController emailController = TextEditingController();
+  TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
   @override
@@ -24,7 +24,7 @@ class LoginController extends GetxController {
     //print('Email: ${emailController.text}');
     //print('Password: ${passwordController.text}');
 
-    AppDatabase.login(emailController.text, passwordController.text);
+    AppDatabase.login(usernameController.text, passwordController.text);
   }
 
   void register() {

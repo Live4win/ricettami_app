@@ -47,11 +47,11 @@ class LoginView extends GetView<LoginController> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             spacing: 8,
                             children: [
-                              Text('Email'),
+                              Text('Username'),
                               TextField(
-                                controller: controller.emailController,
+                                controller: controller.usernameController,
                                 decoration: InputDecoration(
-                                  hintText: 'Inserisci la mail',
+                                  hintText: "Inserisci l'username",
                                   hintStyle: TextStyle(
                                     color: Colors.grey,
                                   ),
@@ -69,6 +69,7 @@ class LoginView extends GetView<LoginController> {
                               Text('Password'),
                               TextField(
                                 controller: controller.passwordController,
+                                onSubmitted: (_) => controller.login(),
                                 obscureText: true,
                                 decoration: InputDecoration(
                                   hintText: 'Inserisci la password',
