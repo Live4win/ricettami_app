@@ -117,25 +117,55 @@ class HomeView extends GetView<HomeController> {
                       child: ResponsiveGridList(
                         desiredItemWidth: 400,
                         minSpacing: 44.0,
-                        //shrinkWrap: true,
-                        //minSpacing: 44.0,
-                        //shrinkWrap: true,
-                        /*crossAxisCount: (context.width >= 1775) ? 3 : 2,
-                        childAspectRatio: 3,
-                        mainAxisSpacing: 44,
-                        crossAxisSpacing: 44,*/
-                        //crossAxisCount: 2,
-                        //mainAxisSpacing: 44,
-                        //crossAxisSpacing: 44,
-                        //childAspectRatio: context.width / 550,
-
-                        ///padding: EdgeInsets.all(44),
                         children: [
-                          RecipeCard(),
-                          RecipeCard(),
-                          RecipeCard(),
-                          RecipeCard(),
-                          RecipeCard(),
+                          PersonalRecipeCard(
+                            mainTitle: 'Ricetta1',
+                            description:
+                                'Some descSome descSome descSome descSome descSome descSome descSome descSome descSome descSome descSome desc',
+                            content:
+                                'Some content Some content Some content Some content Some content Some content Some content Some content ',
+                            onTap: () {},
+                          ),
+                          CommunityRecipeCard(
+                            mainTitle: 'Ricetta2',
+                            description:
+                                'Some descSome descSome descSome descSome descSome descSome descSome descSome descSome descSome descSome desc',
+                            content:
+                                'Some content Some content Some content Some content Some content Some content Some content Some content ',
+                            onTap: () {},
+                          ),
+                          AiRecipeCard(
+                            mainTitle: 'Ricetta3',
+                            description:
+                                'Some descSome descSome descSome descSome descSome descSome descSome descSome descSome descSome descSome desc',
+                            content:
+                                'Some content Some content Some content Some content Some content Some content Some content Some content ',
+                            onTap: () {},
+                          ),
+                          PersonalRecipeCard(
+                            mainTitle: 'Ricetta4',
+                            description:
+                                'Some descSome descSome descSome descSome descSome descSome descSome descSome descSome descSome descSome desc',
+                            content:
+                                'Some content Some content Some content Some content Some content Some content Some content Some content ',
+                            onTap: () {},
+                          ),
+                          CommunityRecipeCard(
+                            mainTitle: 'Ricetta5',
+                            description:
+                                'Some descSome descSome descSome descSome descSome descSome descSome descSome descSome descSome descSome desc',
+                            content:
+                                'Some content Some content Some content Some content Some content Some content Some content Some content ',
+                            onTap: () {},
+                          ),
+                          AiRecipeCard(
+                            mainTitle: 'Ricetta6',
+                            description:
+                                'Some descSome descSome descSome descSome descSome descSome descSome descSome descSome descSome descSome desc',
+                            content:
+                                'Some content Some content Some content Some content Some content Some content Some content Some content ',
+                            onTap: () {},
+                          ),
                         ],
                       ),
                     ),

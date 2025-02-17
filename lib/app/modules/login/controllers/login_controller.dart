@@ -23,6 +23,8 @@ class LoginController extends GetxController {
   void login() {
     //print('Email: ${emailController.text}');
     //print('Password: ${passwordController.text}');
+
+    AppDatabase.login(emailController.text, passwordController.text);
   }
 
   void register() {

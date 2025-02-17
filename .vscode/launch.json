@@ -17,7 +17,9 @@
                 "--dart-define-from-file",
                 "env.json",
                 "--dart-define-from-file",
-                "config.json"
+                "config.json",
+                "--web-browser-flag",
+                "--disable-web-security"
             ],
             "codeLens": {
                 // Types of CodeLens to inject
@@ -43,7 +45,9 @@
                 "--dart-define-from-file",
                 "env.json",
                 "--dart-define-from-file",
-                "config.json"
+                "config.json",
+                "--web-browser-flag",
+                "--disable-web-security"
             ],
             "flutterMode": "release",
             "env": {

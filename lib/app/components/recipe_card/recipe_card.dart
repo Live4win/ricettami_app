@@ -1,16 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:ricettami_app/core_packages.dart';
+
+export 'personal_recipe_card.dart';
+export 'community_recipe_card.dart';
+export 'ai_recipe_card.dart';
 
 class RecipeCard extends StatelessWidget {
-  final double? width;
-  final double? height;
+  final String mainTitle;
+  final String? secondaryTitle;
+  final String? content;
+  final IconData mainIcon;
+  final List<Widget>? trailing;
+  final void Function()? onTap;
 
-  const RecipeCard({this.width, this.height, super.key});
+  const RecipeCard(
+      {required this.mainTitle,
+      required this.mainIcon,
+      this.secondaryTitle,
+      this.content,
+      this.onTap,
+      this.trailing,
+      super.key});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 42, vertical: 24),
         decoration: BoxDecoration(
@@ -29,7 +43,7 @@ class RecipeCard extends StatelessWidget {
           spacing: 24,
           children: [
             Text(
-              'Recipe title',
+              mainTitle,
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -53,7 +67,7 @@ class RecipeCard extends StatelessWidget {
                               flex: 1,
                               //fit: FlexFit.tight,
                               child: Icon(
-                                RicettamiIcons.chef_hat,
+                                mainIcon,
                                 size: 44,
                               ),
                             ),
@@ -65,7 +79,7 @@ class RecipeCard extends StatelessWidget {
                                 spacing: 8,
                                 children: [
                                   Text(
-                                    'Ricetta 1: Notare come pu; essere fatta una cpsa bellissima del genere bla abla',
+                                    secondaryTitle ?? '',
                                     style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
@@ -74,7 +88,7 @@ class RecipeCard extends StatelessWidget {
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                   Text(
-                                    'ciaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociao',
+                                    content ?? '',
                                     maxLines: 2,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
@@ -97,23 +111,7 @@ class RecipeCard extends StatelessWidget {
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            // Trailing icons go here
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                RicettamiIcons.edit,
-                                size: 32,
-                              ),
-                            ),
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                RicettamiIcons.delete,
-                                size: 32,
-                              ),
-                            ),
-                          ],
+                          children: trailing ?? [],
                         )
                       ],
                     ),

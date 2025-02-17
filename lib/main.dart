@@ -9,6 +9,8 @@ void main() {
   TextTheme textTheme = createTextTheme("Inter", "Inter");
 
   MaterialTheme theme = MaterialTheme(textTheme);
+  AppDatabase.init();
+
   runApp(
     GetMaterialApp(
       title: "Ricettami",
